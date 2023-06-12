@@ -1,0 +1,20 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: update-nameserver
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: master0.ocp.example.local
+  desiredState:
+    interfaces:
+      - name: enp2s0
+        description: Update nameserver
+        state: up
+        ipv4:
+          dhcp: true
+          enabled: true
+          auto-dns: false
+    dns-resolver:
+      config:
+        server:
+          - 192.168.124.1
