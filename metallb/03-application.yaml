@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: echoserver
+  name: onp-metallb
 ---
 apiVersion: v1
 kind: Pod
 metadata:
   name: echoserver
-  namespace: echoserver
+  namespace: onp-metallb
   labels:
     app: echoserver
 spec:
@@ -31,7 +31,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: echoserver
-  namespace: echoserver
+  namespace: onp-metallb
 spec:
   ports:
   - port: 8080

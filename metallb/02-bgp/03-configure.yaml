@@ -1,0 +1,34 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  namespace: metallb-system
+  name: onp-bgp-pool
+spec:
+  addresses:
+    - 10.10.1.10-10.10.1.20
+---
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  namespace: metallb-system
+  name: onp-bgp-peer
+spec:
+  peerAddress: 192.168.125.11
+  peerASN: 64512
+  myASN: 64512
+  routerID: 192.168.125.11
+---
+kind: BGPAdvertisement
+metadata:
+  name: onp-bgp-advertisement
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+    - onp-bgp-pool
+  peers:
+    - onp-bgp-peer
+  communities:
+    - 65535:65282
+  aggregationLength: 32
+  aggregationLengthV6: 128
+  localPref: 100
