@@ -2,7 +2,7 @@
 ## Architecture
 ![Architecture](./.architecture.png?raw=true)
 ## Configure VyOS
-See [vyos](./vyos)
+See [vyos](./01-vyos)
 
 ## Configure NNCP
 ```
