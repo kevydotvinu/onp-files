@@ -1,8 +1,8 @@
 # BGP
 ## Architecture
-![Architecture](architecture.png)
+![Architecture](/architecture.png?raw=true)
 ## Configure VyOS
-See [vyos](vyos/)
+See [vyos](/vyos?raw=true)
 
 ## Configure NNCP
 ```
