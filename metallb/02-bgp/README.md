@@ -2,12 +2,10 @@
 ## Architecture
 ![Architecture](./.architecture.png?raw=true)
 ## Configure VyOS
-See [vyos](./01-vyos).
+See [01-vyos](./01-vyos).
 
 ## Configure NNCP
-```
-oc create -f nncp.yaml
-```
+See [02-nncp](./02-nncp).
 
 ## Configure BGP
 ```
