@@ -1,8 +1,8 @@
 # BGP
 ## Architecture
-![Architecture](metallb/02-bgp/.architecture.png?raw=true)
+![Architecture](./.architecture.png?raw=true)
 ## Configure VyOS
-See [vyos](metallb/02-bgp/vyos)
+See [vyos](./vyos)
 
 ## Configure NNCP
 ```

@@ -6,10 +6,10 @@ oc create -f install.yaml
 
 ## Configure MetalLB
 ### L2 Advertisement
-See [02-l2](metallb/02-l2)
+See [02-l2](./02-l2)
 
 ### BGP Advertisement
-See [02-bgp](metallb/02-bgp)
+See [02-bgp](./02-bgp)
 
 ## Deploy application
 ```
