@@ -14,7 +14,7 @@ exit
 ## Configure BGP
 ```
 configure
-set protocols bgp 64512 parameters router-id 192.168.125.11
+set protocols bgp 64512 parameters router-id 192.168.125.10
 set protocols bgp 64512 neighbor 192.168.125.100 address-family ipv4-unicast
 set protocols bgp 64512 neighbor 192.168.125.100 remote-as 64512
 commit
