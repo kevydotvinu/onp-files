@@ -5,7 +5,7 @@ metadata:
   name: onp-bgp-pool
 spec:
   addresses:
-    - 10.10.1.10-10.10.1.20
+    - 192.168.130.10-192.168.130.20
 ---
 apiVersion: metallb.io/v1beta2
 kind: BGPPeer
@@ -13,11 +13,11 @@ metadata:
   namespace: metallb-system
   name: onp-bgp-peer
 spec:
-  peerAddress: 192.168.125.11
+  peerAddress: 192.168.125.10
   peerASN: 64512
   myASN: 64512
-  routerID: 192.168.125.11
 ---
+apiVersion: metallb.io/v1beta1
 kind: BGPAdvertisement
 metadata:
   name: onp-bgp-advertisement

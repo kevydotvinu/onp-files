@@ -1,24 +1,26 @@
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: sno-onp2
+  name: onp2-ethernet
 spec:
   nodeSelector: 
     kubernetes.io/hostname: node.sno4.example.local
-  maxUnavailable: 3 
   desiredState:
     interfaces:
-      - name: onp2
-        description: Configure enp8s0
+      - name: enp7s0
+        description: Configure enp7s0
         type: ethernet
         state: up
         ipv4:
-          dhcp: true
+          dhcp: false
+          address:
+          - ip: 192.168.125.100
+            prefix-length: 24
           enabled: true
     routes:
       config:
-        - destination: 192.168.125.0/24
-          metric: 1
+        - destination: 0.0.0.0/0
+          metric: 115
           next-hop-address: 192.168.125.10
-          next-hop-interface: enp8s0
+          next-hop-interface: enp7s0
           table-id: 254

@@ -1,0 +1,16 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: onp2-ethernet-absent
+spec:
+  nodeSelector: 
+    kubernetes.io/hostname: node.sno4.example.local
+  desiredState:
+    interfaces:
+      - name: enp7s0
+        description: Configure enp7s0
+        type: ethernet
+        state: absent
+        ipv4:
+          dhcp: false
+          enabled: false
