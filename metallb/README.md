@@ -13,10 +13,10 @@ oc create -f 03-instance.yaml
 ```
 ## Configure MetalLB
 ### L2 Advertisement
-See [02-l2](./02-l2).
+See [04-l2](./04-l2).
 
 ### BGP Advertisement
-See [02-bgp](./02-bgp).
+See [04-bgp](./04-bgp).
 
 ## Deploy application
 ```
