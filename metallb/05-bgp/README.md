@@ -5,7 +5,7 @@
 See [01-vyos](./01-vyos).
 
 ## Configure NNCP
-See [02-nncp](./02-nncp).
+See [02-nncp](./02-nmstate).
 
 ## Configure BGP
 ```
