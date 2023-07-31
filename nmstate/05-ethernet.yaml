@@ -1,10 +1,10 @@
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: onp2-ethernet
+  name: <network>-<node>-ethernet
 spec:
   nodeSelector: 
-    kubernetes.io/hostname: node.sno4.example.local
+    kubernetes.io/hostname: <hostname>
   desiredState:
     interfaces:
       - name: enp7s0
@@ -14,13 +14,13 @@ spec:
         ipv4:
           dhcp: false
           address:
-          - ip: 192.168.125.100
+          - ip: 192.168.124.3
             prefix-length: 24
           enabled: true
     routes:
       config:
         - destination: 0.0.0.0/0
           metric: 115
-          next-hop-address: 192.168.125.1
+          next-hop-address: 192.168.124.2
           next-hop-interface: enp7s0
           table-id: 254
