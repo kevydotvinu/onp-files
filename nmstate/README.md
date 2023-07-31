@@ -15,7 +15,7 @@ oc create -f 03-instance.yaml
 ```
 oc create -f 04-instance.sh
 ```
-## Configure second interface
+## Apply nncp
 ```
-oc create -f 05-onp2-ethernet.yaml
+oc create -f 05-<nncp>.yaml
 ```

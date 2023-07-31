@@ -1,7 +1,7 @@
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: update-nameserver
+  name: onp1-master0-enp2s0-nameserver
 spec:
   nodeSelector:
     kubernetes.io/hostname: master0.ocp.example.local

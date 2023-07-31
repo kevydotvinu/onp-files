@@ -21,6 +21,6 @@ spec:
       config:
         - destination: 0.0.0.0/0
           metric: 115
-          next-hop-address: 192.168.125.10
+          next-hop-address: 192.168.125.1
           next-hop-interface: enp7s0
           table-id: 254
