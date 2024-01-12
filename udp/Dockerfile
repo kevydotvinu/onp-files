@@ -1,5 +1,5 @@
 FROM golang
 WORKDIR /tmp
 COPY . .
-RUN go build -o main main.go
-CMD ["./main", "--port", "9900"]
+RUN go build -o server server.go
+CMD ["./server", "--port", "9900"]
